@@ -62,7 +62,7 @@ public class FreightCalculationController {
     public ResponseEntity<Object> deleteFreight(@PathVariable(value = "id") UUID id) {
         Optional<FreightCalculationModel> freightCalculationModelOptional = freightCalculationService.findById(id);
         if (!freightCalculationModelOptional.isPresent()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Freight Spot not found");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Freight not found");
         }
         freightCalculationService.delete(freightCalculationModelOptional.get());
         return ResponseEntity.status(HttpStatus.OK).body("Freight deleted successfully");
