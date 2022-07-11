@@ -16,10 +16,4 @@ public class SigaBemApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SigaBemApplication.class, args);
 	}
-
-	@GetMapping("/")
-	public String index() {
-		return "Olá Mundo";
-	}
-
 }
